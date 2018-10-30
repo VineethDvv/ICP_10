@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7">
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8">
+<html lang="en" ng-app="myApp" class="no-js lt-ie9">
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="home.js"></script>
+
+    <style>
+
+        .menu input{
+            width: 300px;
+            background: transparent;
+            border: 2px solid #1ab188;
+            border-radius: 4px;
+            color: #5e5e5e;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px;
+            margin-top: 10px;
+        }
+        .menu button{
+            width: 419px;
+            height:40px;
+            background:#1ab188;
+            border:  2px solid #ffffff;
+            cursor: pointer;
+            border-radius: 4px;
+            color: #ffffff;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px;
+            margin-top: 10px;
+        }
+        table {
+            max-width: 960px;
+            margin: 10px auto;
+            border: 1px solid #FFF;
+        }
+
+        caption {
+            font-size: 1.6em;
+            font-weight: 400;
+            padding: 10px 0;
+        }
+
+        thead th {
+            font-weight: 400;
+            background: #8a97a0;
+            color: #FFF;
+        }
+
+        tr {
+            background: #f4f7f8;
+            border: 1px solid #FFF;
+            margin-bottom: 5px;
+        }
+
+        tr:nth-child(even) {
+            background: #e8eeef;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 20px;
+            font-weight: 300;
+        }
+
+        tfoot tr {
+            background: none;
+        }
+
+        tfoot td {
+            padding: 10px 2px;
+            font-size: 0.8em;
+            font-style: italic;
+            color: #8a97a0;
+        }
+    </style>
+</head>
+<body class="body" ng-app="myApp" ng-controller="View1Ctrl">
+
+
+<div style="top: 200px">
+    <form method="post" ng-submit="getVenues()">
+    <div class="menu" id="div_SearchContainer">
+        <h1 align="absolute" style="text-align: center; color: #1ab188">Search your place of interest!</h1>
+        <input type="text" id="txt_placeName" ng-model="place" placeholder="Enter the place you want to search for" style="margin-left: 100px"/>
+        <input type="text" id="txt_searchFilter" ng-model="filter" placeholder="Enter the search query"/>
+        <button id="btn_getReview">Get Venues</button>
+        <div id ="VenueList"></div>
+        <li ng-repeat="venue in venueList"  style="font-size: x-large; color: #5e5e5e; text-align: center; list-style: none; list-style-position:inside;">
+            <p>{{venue.name}}</p>
+        </li>
+    </div>
+           <span ng-show="shows" style="text-align: center;">{{noText}}</span>
+
+    </form>
+</div>
+</body>
+</html>
