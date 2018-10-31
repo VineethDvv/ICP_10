@@ -1,1 +1,1 @@
-web: node mongo.js
+web: node server.js

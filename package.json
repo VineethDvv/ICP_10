@@ -1,18 +1,15 @@
 {
-  "name": "icp_10",
+  "name": "tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "node mongo.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "express": "^4.16.4",
+    "express": "^4.13.3",
     "request": "^2.88.0"
-  }
+  },
+  "author": "harish",
+  "license": "ISC"
 }

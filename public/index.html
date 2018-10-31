@@ -1,0 +1,79 @@
+
+	<html>
+	<head>
+		<!--<link rel="stylesheet" href="css/app.css">-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <style>
+            body{
+                background-color: gainsboro;
+                padding:2rem;
+            }
+            h1{
+                color: #337ab7;
+                font-weight: bold;
+                font-size: 3rem;
+            }
+        </style>
+	</head>
+
+
+	<body>
+	<div ng-app="nodeJsApp" ng-controller="nodeJSController" class="container">
+		<h1 class="text-center">FourSquare API</h1>
+		<form method="post" ng-submit="displayResults()">
+			<div class="form-group">
+				<label>Location:</label>
+				<input type="text" class="form-control"  ng-model="location">
+			</div>
+			<div class="form-group">
+				<label>Search:</label>
+				<i class="fa fa-ambulance"></i><input type="text" class="form-control" ng-model="search">
+			</div>
+			<div class="text-center"><input type="submit" value="Display Results"/>
+				<div class="forResults" ng-model="divContent">
+					<ul>
+						<li ng-repeat="venue in venueList" ng-model="venueList">
+							{{venue.name}} <div></div> {{venue.location}}
+							<hr>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript" src="js/app.js"></script>
+
+		<!-- Controllers -->
+		<script src="js/controllers/MainController.js"></script>
+	</div>
+	</body>
+	<!--<body style="background-color: aqua"   ng-app="homepage">-->
+	<!--<div ng-controller="searchctrl">-->
+		<!--<p style="font-size: 25px; font-family: Pristina;position: relative;left:30% ">Ready to know about some cool stuff ? Search below </p>-->
+		<!--<input type="search" placeholder="Search Here" id="searchitem" class="searchitem" ng-model="searchitem">-->
+		<!--<button  class="btn button searchitem " ng-click="getSearchResult()"> Show Result </button>-->
+		<!--<div class="homebody">-->
+
+			<!--<p id="errormsg"></p>-->
+			<!--<p><b>{{description}}</b></p>-->
+			<!--<p>{{searchDescription}}</p>-->
+			<!--<p><b>{{wikiheading}}</b></p>-->
+			<!--<p><a href="{{wiki}}"> {{wiki}}</a> </p>-->
+			<!--<p><img  ng-src="{{searchimage}} "></p>-->
+
+
+		<!--</div>-->
+	<!--</div>-->
+
+
+	<!--<script type="text/javascript" src="js/app.js"></script>-->
+
+	<!--&lt;!&ndash; Controllers &ndash;&gt;-->
+	<!--<script src="js/controllers/MainController.js"></script>-->
+
+	<!--</body>-->
+
+</html>
